@@ -20,7 +20,9 @@ class BinancePerpetualClient extends BinanceBase {
     });
   }
 
-
+  _constructLevel2Snapshot(msg, market) {
+    return this._constructLevel2Update(msg, market);
+  }
 }
 
 module.exports = BinancePerpetualClient;
