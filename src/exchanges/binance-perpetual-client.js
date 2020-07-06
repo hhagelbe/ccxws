@@ -9,7 +9,7 @@ class BinancePerpetualClient extends BinanceBase {
     restThrottleMs = 1000,
   } = {}) {
     super({
-      name: "Binance",
+      name: "BinancePerpetual",
       wssPath: "wss://fstream.binance.com/stream",
       restL2SnapshotPath: "https://fapi.binance.com/fapi/v1/depth",
       useAggTrades,

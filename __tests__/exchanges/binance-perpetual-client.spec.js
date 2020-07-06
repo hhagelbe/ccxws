@@ -1,11 +1,11 @@
 const { testClient } = require("../test-runner");
 const { get } = require("../../src/https");
-const BinancePerpetualClient = require("../../src/exchanges/binance-fapi-client");
+const BinancePerpetualClient = require("../../src/exchanges/binance-perpetual-client");
 
 testClient({
   clientFactory: () => new BinancePerpetualClient(),
   clientName: "BinancePerpetualClient",
-  exchangeName: "Binance",
+  exchangeName: "BinancePerpetual",
   markets: [
     {
       id: "BTCUSDT",
