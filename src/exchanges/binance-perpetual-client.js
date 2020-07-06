@@ -1,0 +1,26 @@
+const { BinanceBase } = require("./binance-base");
+
+class BinancePerpetualClient extends BinanceBase {
+  constructor({
+    useAggTrades = true,
+    requestSnapshot = true,
+    socketBatchSize = 200,
+    socketThrottleMs = 1000,
+    restThrottleMs = 1000,
+  } = {}) {
+    super({
+      name: "Binance",
+      wssPath: "wss://fstream.binance.com/stream",
+      restL2SnapshotPath: "https://fapi.binance.com/fapi/v1/depth",
+      useAggTrades,
+      requestSnapshot,
+      socketBatchSize,
+      socketThrottleMs,
+      restThrottleMs,
+    });
+  }
+
+
+}
+
+module.exports = BinancePerpetualClient;
